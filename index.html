@@ -25,6 +25,10 @@
         .color-name {
             margin-top: 10px;
             font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.57143;
+            font-size: 0.875rem;
+            text-transform: capitalize;
         }
 
         .color-code {
@@ -41,70 +45,136 @@
             margin-bottom: 10px;
             font-family: 'Poppins', sans-serif;
         }
+
+        .color-code-label {
+            text-align: left;
+            color: #6B7D8F;
+        }
+
+        .color-code-value {
+            text-align: left;
+            color: #07080A;
+        }
+
+        /* Style for the accordion container */
+
+        .accordion {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Style for accordion items */
+
+        .accordion-item {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+
+        /* Style for accordion headers */
+
+        .accordion-header {
+            background-color: #f9f9f9;
+            padding: 16px;
+            cursor: pointer;
+            outline: none;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Style for accordion contents */
+
+        .accordion-content {
+            padding: 16px;
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-    <div id="MitraBlue">
-        <div class="section-header">Mitra Blue</div>
-        <div id="MitraBlueshades-palette"></div>
+    <div class="accordion-item">
+        <div class="accordion-header">
+            Primary
+        </div>
+        <div class="accordion-content">
+            <div id="MitraBlue">
+                <div class="section-header">Mitra Blue</div>
+                <div id="MitraBlueshades-palette"></div>
+            </div>
+            <div id="CoolGray">
+                <div class="section-header">Cool Gray</div>
+                <div id="CoolGrayshades-palette"></div>
+            </div>
+            <div id="Black">
+                <div class="section-header">Black</div>
+                <div id="Blackshades-palette"></div>
+            </div>
+            <div id="White">
+                <div class="section-header">White</div>
+                <div id="Whiteshades-palette"></div>
+            </div>
+        </div>
     </div>
-    <div id="CoolGray">
-        <div class="section-header">Cool Gray</div>
-        <div id="CoolGrayshades-palette"></div>
+    <div class="accordion-item">
+        <div class="accordion-header">
+            Sematic
+        </div>
+        <div class="accordion-content">
+            <div id="InfoBlue">
+                <div class="section-header">Info Blue</div>
+                <div id="InfoBlueshades-palette"></div>
+            </div>
+            <div id="Green">
+                <div class="section-header">Green</div>
+                <div id="Greenshades-palette"></div>
+            </div>
+            <div id="Red">
+                <div class="section-header">Red</div>
+                <div id="Redshades-palette"></div>
+            </div>
+            <div id="Yellow">
+                <div class="section-header">Yellow</div>
+                <div id="Yellowshades-palette"></div>
+            </div>
+        </div>
     </div>
-    <div id="Black">
-        <div class="section-header">Black</div>
-        <div id="Blackshades-palette"></div>
+    <div class="accordion-item">
+        <div class="accordion-header">
+            Secondary
+        </div>
+        <div class="accordion-content">
+            <div id="ProductBlue">
+                <div class="section-header">Product Blue</div>
+                <div id="ProductBlueshades-palette"></div>
+            </div>
+            <div id="ProductGreen">
+                <div class="section-header">Product Green</div>
+                <div id="ProductGreenshades-palette"></div>
+            </div>
+            <div id="ProductLightOrange">
+                <div class="section-header">Product Light Orange</div>
+                <div id="ProductLightOrangeshades-palette"></div>
+            </div>
+            <div id="ProductMagenta">
+                <div class="section-header">Product Magenta</div>
+                <div id="ProductMagentashades-palette"></div>
+            </div>
+            <div id="ProductNavy">
+                <div class="section-header">Product Navy</div>
+                <div id="ProductNavyshades-palette"></div>
+            </div>
+            <div id="ProductOrange">
+                <div class="section-header">Product Orange</div>
+                <div id="ProductOrangeshades-palette"></div>
+            </div>
+            <div id="ProductPurple">
+                <div class="section-header">Product Purple</div>
+                <div id="ProductPurpleshades-palette"></div>
+            </div>
+        </div>
     </div>
-    <div id="White">
-        <div class="section-header">White</div>
-        <div id="Whiteshades-palette"></div>
-    </div>
-    <div id="InfoBlue">
-        <div class="section-header">Info Blue</div>
-        <div id="InfoBlueshades-palette"></div>
-    </div>
-    <div id="Green">
-        <div class="section-header">Green</div>
-        <div id="Greenshades-palette"></div>
-    </div>
-    <div id="Red">
-        <div class="section-header">Red</div>
-        <div id="Redshades-palette"></div>
-    </div>
-    <div id="Yellow">
-        <div class="section-header">Yellow</div>
-        <div id="Yellowshades-palette"></div>
-    </div>
-    <div id="ProductBlue">
-        <div class="section-header">Product Blue</div>
-        <div id="ProductBlueshades-palette"></div>
-    </div>
-    <div id="ProductGreen">
-        <div class="section-header">Product Green</div>
-        <div id="ProductGreenshades-palette"></div>
-    </div>
-    <div id="ProductLightOrange">
-        <div class="section-header">Product Light Orange</div>
-        <div id="ProductLightOrangeshades-palette"></div>
-    </div>
-    <div id="ProductMagenta">
-        <div class="section-header">Product Magenta</div>
-        <div id="ProductMagentashades-palette"></div>
-    </div>
-    <div id="ProductNavy">
-        <div class="section-header">Product Navy</div>
-        <div id="ProductNavyshades-palette"></div>
-    </div>
-    <div id="ProductOrange">
-        <div class="section-header">Product Orange</div>
-        <div id="ProductOrangeshades-palette"></div>
-    </div>
-    <div id="ProductPurple">
-        <div class="section-header">Product Purple</div>
-        <div id="ProductPurpleshades-palette"></div>
-    </div>
+
     <script>
         // Inline JavaScript for color palette generation and copy-to-clipboard functionality
 
@@ -758,6 +828,18 @@
         createColorCards(ProductNavy, 'ProductNavyshades-palette');
         createColorCards(ProductOrange, 'ProductOrangeshades-palette');
         createColorCards(ProductPurple, 'ProductPurpleshades-palette');
+
+        // Get all accordion headers
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        // Loop through all accordion headers
+        accordionHeaders.forEach(header => {
+            // Add click event listener to each accordion header
+            header.addEventListener('click', () => {
+                // Toggle the accordion content's display property
+                header.nextElementSibling.style.display = header.nextElementSibling.style.display === 'none' ? 'block' : 'none';
+            });
+        });
     </script>
 </body>
 
