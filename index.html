@@ -89,10 +89,32 @@
             padding: 16px;
             display: block;
         }
+        
+        h1, h2, p, li {
+            font-family: 'Poppins', sans-serif;
+        }
+
+.header-note{
+background: #F2F7FD;
+padding:20px;
+margin: 1.5em 0;
+}
     </style>
 </head>
 
 <body>
+    <h1>Overview</h1>
+<div class="header-note">
+<p>Mitratech’s product suite is color-coded by business unit, delivering a consistent brand experience under each service area while also helping us ensure that we’re evenly-distributing content for each audience. 
+
+We are committed to complying with the <a href="http://www.w3.org/TR/WCAG/">Web Content Accessibility Guidelines AA standard contrast ratios.</a> 
+
+To do this, apply primary, secondary (if needed), semantic, and extended colors that support usability by ensuring enough color contrast between elements so that people with some sort of low vision or color blindness can see and use our products.</p></div>
+
+<h2> Primary Colors</h2>    
+<p> Primary colors are universally used across all applications and create a cohesive style between all Mitratech products.</p> 
+<ul>
+<li>Mitra Blue 500  will be used as the Primary color and applied to the horizontal or vertical navigation bar. This color has been tested for accessibility and legibility and passes all tests. This primary color or its color derivatives can be used for action items.</li> <li> Cool Gray 500, Default White and black are helpful for offsetting content in a primarily white layout without losing warmth and cleanliness and is often used as background colors and line borders. Their subtlety allows them to help create subtle shadows or depth across the product.</li>  </ul> 
     <div class="accordion-item">
         <div class="accordion-header">
             Primary
@@ -107,38 +129,15 @@
                 <div id="CoolGrayshades-palette"></div>
             </div>
             <div id="Black">
-                <div class="section-header">Black</div>
+                <div class="section-header">Black and White</div>
                 <div id="Blackshades-palette"></div>
             </div>
-            <div id="White">
-                <div class="section-header">White</div>
-                <div id="Whiteshades-palette"></div>
-            </div>
+           
         </div>
     </div>
-    <div class="accordion-item">
-        <div class="accordion-header">
-            Sematic
-        </div>
-        <div class="accordion-content">
-            <div id="InfoBlue">
-                <div class="section-header">Info Blue</div>
-                <div id="InfoBlueshades-palette"></div>
-            </div>
-            <div id="Green">
-                <div class="section-header">Green</div>
-                <div id="Greenshades-palette"></div>
-            </div>
-            <div id="Red">
-                <div class="section-header">Red</div>
-                <div id="Redshades-palette"></div>
-            </div>
-            <div id="Yellow">
-                <div class="section-header">Yellow</div>
-                <div id="Yellowshades-palette"></div>
-            </div>
-        </div>
-    </div>
+
+<h2> Secondary Colors</h2>    
+<p> Our secondary palette contains a variety of colors to keep things fresh and exciting. The secondary palette comprises Mitratech Brand Colors and is used in secondary graphics throughout the applications. Accent colors used for the status references, graphics, and Illustrations compliment the primary palette. They have to be used minimally on the page.</p> 
     <div class="accordion-item">
         <div class="accordion-header">
             Secondary
@@ -174,6 +173,33 @@
             </div>
         </div>
     </div>
+
+<h2> Semantic Solors</h2>    
+<p> Semantic color helps users find people, identify status, see actions, locate help, and understand the next steps. The consistent use of color keeps cognitive load low and makes for a unified and engaging user experience. In addition to the color usage guidelines for the web, there are also iOS and Android application color guidelines that augment the color guidelines for those platforms.</p> 
+    <div class="accordion-item">
+        <div class="accordion-header">
+            Semantic 
+        </div>
+        <div class="accordion-content">
+            <div id="InfoBlue">
+                <div class="section-header">Info Blue</div>
+                <div id="InfoBlueshades-palette"></div>
+            </div>
+            <div id="Green">
+                <div class="section-header">Green</div>
+                <div id="Greenshades-palette"></div>
+            </div>
+            <div id="Red">
+                <div class="section-header">Red</div>
+                <div id="Redshades-palette"></div>
+            </div>
+            <div id="Yellow">
+                <div class="section-header">Yellow</div>
+                <div id="Yellowshades-palette"></div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         // Inline JavaScript for color palette generation and copy-to-clipboard functionality
@@ -271,12 +297,12 @@
                 rgb: 'RGB(7, 8, 10)'
             }
         ];
-        const Black = [{
+        const BlackWhite= [{
             name: 'Black Default',
             hex: '#000000;',
             rgb: 'RGB(0, 0, 0)'
-        }];
-        const White = [{
+        },
+{
             name: 'White Default',
             hex: '#FFFFFF;',
             rgb: 'RGB(255, 255, 255)'
@@ -815,8 +841,7 @@
         }
         createColorCards(MitraBlue, 'MitraBlueshades-palette');
         createColorCards(CoolGray, 'CoolGrayshades-palette');
-        createColorCards(Black, 'Blackshades-palette');
-        createColorCards(White, 'Whiteshades-palette');
+        createColorCards(BlackWhite, 'Blackshades-palette');
         createColorCards(InfoBlue, 'InfoBlueshades-palette');
         createColorCards(Green, 'Greenshades-palette');
         createColorCards(Red, 'Redshades-palette');
