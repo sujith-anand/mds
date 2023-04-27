@@ -131,7 +131,12 @@ To do this, apply primary, secondary (if needed), semantic, and extended colors 
 <p> Primary colors are universally used across all applications and create a cohesive style between all Mitratech products.</p> 
 <ul>
 <li>Mitra Blue 500  will be used as the Primary color and applied to the horizontal or vertical navigation bar. This color has been tested for accessibility and legibility and passes all tests. This primary color or its color derivatives can be used for action items.</li> <li> Cool Gray 500, Default White and black are helpful for offsetting content in a primarily white layout without losing warmth and cleanliness and is often used as background colors and line borders. Their subtlety allows them to help create subtle shadows or depth across the product.</li>  </ul> 
-    <div class="accordion-item">
+    
+<div id="PrimaryColors">
+    <div class="section-header">Primary Palette</div>
+    <div id="PrimaryColors-palette"></div>
+</div>
+<div class="accordion-item">
         <div class="accordion-header">
             Primary Palette & Derivatives 
         </div>
@@ -238,7 +243,28 @@ To do this, apply primary, secondary (if needed), semantic, and extended colors 
   </div>
     <script>
         // Inline JavaScript for color palette generation and copy-to-clipboard functionality
+        const PrimaryColors = [{
+                name: 'Mitra Blue 500',
+                hex: '#0067D2;',
+                rgb: 'RGB(0, 103, 210)'
+            },
+            {
+                name: 'Cool Gray 500',
+                hex: '#8FA7BF;',
+                rgb: 'RGB(143, 167, 191)'
+            },
 
+            {
+                name: 'Black Default',
+                hex: '#000000;',
+                rgb: 'RGB(0, 0, 0)'
+            },
+            {
+                name: 'White Default',
+                hex: '#FFFFFF;',
+                rgb: 'RGB(255, 255, 255)'
+            }
+        ];
 
         const MitraBlue = [{
                 name: 'Mitra Blue 100',
@@ -888,7 +914,9 @@ To do this, apply primary, secondary (if needed), semantic, and extended colors 
         createColorCards(ProductNavy, 'ProductNavyshades-palette');
         createColorCards(ProductOrange, 'ProductOrangeshades-palette');
         createColorCards(ProductPurple, 'ProductPurpleshades-palette');
-
+        createColorCards(PrimaryColors, 'PrimaryColors-palette');
+createColorCards(SecondaryColors, 'SecondaryColors-palette');
+createColorCards(SemanticColors, 'SemanticColors-palette');
         // Get all accordion headers
         const accordionHeaders = document.querySelectorAll('.accordion-header');
 
