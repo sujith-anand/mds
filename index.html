@@ -242,6 +242,18 @@ To do this, apply primary, secondary (if needed), semantic, and extended colors 
     <img src="Images/TAP.png">
   </div>
     <script>
+
+        // Get all accordion headers
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        // Loop through all accordion headers
+        accordionHeaders.forEach(header => {
+            // Add click event listener to each accordion header
+            header.addEventListener('click', () => {
+                // Toggle the accordion content's display property
+                header.nextElementSibling.style.display = header.nextElementSibling.style.display === 'none' ? 'block' : 'none';
+            });
+        });
         // Inline JavaScript for color palette generation and copy-to-clipboard functionality
         const PrimaryColors = [{
                 name: 'Mitra Blue 500',
@@ -917,17 +929,7 @@ To do this, apply primary, secondary (if needed), semantic, and extended colors 
         createColorCards(PrimaryColors, 'PrimaryColors-palette');
 createColorCards(SecondaryColors, 'SecondaryColors-palette');
 createColorCards(SemanticColors, 'SemanticColors-palette');
-        // Get all accordion headers
-        const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-        // Loop through all accordion headers
-        accordionHeaders.forEach(header => {
-            // Add click event listener to each accordion header
-            header.addEventListener('click', () => {
-                // Toggle the accordion content's display property
-                header.nextElementSibling.style.display = header.nextElementSibling.style.display === 'none' ? 'block' : 'none';
-            });
-        });
+        
     </script>
 </body>
 
