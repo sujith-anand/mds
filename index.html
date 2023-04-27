@@ -87,7 +87,7 @@
 
         .accordion-content {
             padding: 16px;
-            display: block;
+            display: none;
         }
         
         h1, h2, p, li ,h3 {
@@ -138,7 +138,7 @@ To do this, apply primary, secondary (if needed), semantic, and extended colors 
 </div>
 <div class="accordion-item">
         <div class="accordion-header">
-            Primary Palette & Derivatives 
+            Show/Hide Primary Palette & Derivatives 
         </div>
         <div class="accordion-content">
             <div id="MitraBlue">
@@ -167,7 +167,7 @@ To do this, apply primary, secondary (if needed), semantic, and extended colors 
 </div>        
 <div class="accordion-item">
         <div class="accordion-header">
-            Secondary Palette & Derivatives 
+            Show/Hide  Secondary Palette & Derivatives 
         </div>
         <div class="accordion-content">
             <div id="ProductBlue">
@@ -211,7 +211,7 @@ To do this, apply primary, secondary (if needed), semantic, and extended colors 
 </div> 
 <div class="accordion-item">
         <div class="accordion-header">
-            Semantic Palette & Derivatives 
+           Show/Hide Semantic Palette & Derivatives 
         </div>
         <div class="accordion-content">
             <div id="InfoBlue">
@@ -260,7 +260,7 @@ To do this, apply primary, secondary (if needed), semantic, and extended colors 
             // Add click event listener to each accordion header
             header.addEventListener('click', () => {
                 // Toggle the accordion content's display property
-                header.nextElementSibling.style.display = header.nextElementSibling.style.display === 'none' ? 'block' : 'none';
+                header.nextElementSibling.style.display = header.nextElementSibling.style.display === 'block' ? 'none' : 'block';
             });
         });
         // Inline JavaScript for color palette generation and copy-to-clipboard functionality
