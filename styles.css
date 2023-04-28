@@ -110,10 +110,11 @@ li {
 body {
     margin: auto;
     width: 60%;
+    background-color: #F9FAFC;
 }
 
 .header-note {
-    background: #F9FAFC;
+    background: #F2F7FD;;
     ;
     padding: 20px;
     margin: 1.5em 0;
@@ -172,5 +173,7 @@ iframe {
 
 .mainContent{
     float: left;
-   width: 85%; 
+   width: 75%;
+   padding: 0 2rem;
+   background-color: #fff; 
 }
