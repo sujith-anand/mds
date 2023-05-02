@@ -108,8 +108,8 @@ li {
 }
 
 body {
-    margin: auto;
-    width: 60%;
+  /*  margin: auto;*/
+    width: 75%;
     background-color: #F9FAFC;
 }
 
@@ -172,7 +172,7 @@ iframe {
 }
 
 .mainContent{
-    float: left;
+   float: left;
    width: 75%;
    padding: 0 2rem;
    background-color: #fff; 
