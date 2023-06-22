@@ -150,8 +150,13 @@ iframe {
 }
 
 .image-container img {
-    width: 100%;
+    width: 80%;
     display: block;
+    border: 10px solid #fafafa;
+    border-radius: 10px;
+    margin: 1rem;
+    box-shadow: #d9d9ea 1px 3px 10px;
+    padding: 5px;
 }
 
 .prinicpleM {
