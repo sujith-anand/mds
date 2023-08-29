@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Cards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        .color-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding: 20px;
+        }
+
+        .color-card {
+            width: calc(25% - 20px);
+            /* 3 colors per row */
+            height: 150px;
+            border: 1px solid #C7D3DF;;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: #E3E9EF 0px 3px 8px;
+
+        }
+
+        .color {
+            width: 120px;
+            height: 120px;
+            background-color: var(--color-code);
+            margin: 20px;
+            border-radius: 100px;
+        }
+
+        .color-info {
+            width: 50%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: left;
+            font-family: poppins;
+            font-weight: 600;
+        }
+
+        .color-name,
+        .color-code {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="color-container" id="colorContainer"></div>
+
+    <script>
+        const colorData = [{
+                name: "Mitra Blue 400",
+                code: "#408DDE"
+            },
+            {
+                name: "Product Light Orange 400",
+                code: "#F6A869"
+            },
+            {
+                name: "Product Green 400",
+                code: "#53C34A"
+            },
+            {
+                name: "Product Magenta 400",
+                code: "#CE57A2"
+            }, {
+                name: "Product Blue 400",
+                code: "#48CFE5"
+            }, {
+                name: "Product Navy 400",
+                code: "#405B7E"
+            }, {
+                name: "Product Orange 400",
+                code: "#F2846F"
+            }, {
+                name: "Product Purple 400",
+                code: "#8A62A8"
+            }, {
+                name: "Mitra Blue 200",
+                code: "#BFD9F4"
+            },
+            {
+                name: "Product Light Orange 200",
+                code: "#FCE2CD"
+            },
+            {
+                name: "Product Green 200",
+                code: "#C5EBC2"
+            },
+            {
+                name: "Product Magenta 200",
+                code: "#EEC7E0"
+            }, {
+                name: "Product Blue 200",
+                code: "#C2EFF6"
+            }, {
+                name: "Product Navy 200",
+                code: "#BFC8D4"
+            }, {
+                name: "Product Orange 200",
+                code: "#FAD6CF"
+            }, {
+                name: "Product Purple 200",
+                code: "#D8CAE2"
+            },{
+                name: "Cool Gray 200",
+                code: "#E3E9EF"
+            }, {
+                name: "Cool Gray 300",
+                code: "#C7D3DF"
+            }, {
+                name: "Cool Gray 400",
+                code: "#ABBDCF"
+            }, {
+                name: "Cool Gray 600",
+                code: "#6B7D8F"
+            },
+            // Add more color data entries here
+        ];
+
+        const colorContainer = document.getElementById("colorContainer");
+
+        function createColorCard(colorInfo) {
+            const colorCard = document.createElement("div");
+            colorCard.classList.add("color-card");
+            colorCard.style.setProperty("--color-code", colorInfo.code);
+
+            const colorElement = document.createElement("div");
+            colorElement.classList.add("color");
+
+            const colorInfoElement = document.createElement("div");
+            colorInfoElement.classList.add("color-info");
+
+            const colorName = document.createElement("div");
+            colorName.classList.add("color-name");
+            colorName.textContent = colorInfo.name;
+
+            const colorCode = document.createElement("div");
+            colorCode.classList.add("color-code");
+            colorCode.textContent = colorInfo.code;
+
+            colorInfoElement.appendChild(colorName);
+            colorInfoElement.appendChild(colorCode);
+
+            colorCard.appendChild(colorElement);
+            colorCard.appendChild(colorInfoElement);
+
+            return colorCard;
+        }
+
+        function populateColorContainer() {
+            colorData.forEach((colorInfo) => {
+                const colorCard = createColorCard(colorInfo);
+                colorContainer.appendChild(colorCard);
+            });
+        }
+
+        populateColorContainer();
+    </script>
+</body>
+
+</html>
